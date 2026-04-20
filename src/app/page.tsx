@@ -236,11 +236,13 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="section-divider" />
+
         {/* ─── BENEFITS ─── */}
-        <section className="section-glow py-24 md:py-32">
+        <section className="section-glow section-grid py-24 md:py-32">
           <div className="mx-auto max-w-6xl px-6">
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-4">
-              Hvorfor AI Norge?
+              Hvorfor <span className="gradient-text">AI Norge?</span>
             </h2>
             <p className="text-center text-muted max-w-xl mx-auto mb-16">
               Alt du trenger for å holde deg oppdatert og relevant i AI-verdenen.
@@ -269,7 +271,7 @@ export default function Home() {
                   desc: "Knytt kontakter med gründere, utviklere og nysgjerrige mennesker som alle har ett til felles: de vil forstå og bruke AI bedre.",
                 },
               ].map((item) => (
-                <div key={item.title} className="glass-card rounded-2xl p-8 flex gap-5">
+                <div key={item.title} className="glass-card rounded-2xl p-8 flex gap-5" style={{borderLeft: "2px solid rgba(228, 64, 64, 0.3)"}}>
                   <span className="text-3xl flex-shrink-0 mt-1">{item.emoji}</span>
                   <div>
                     <h3 className="text-lg font-bold mb-2">{item.title}</h3>
@@ -281,11 +283,13 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="section-divider" />
+
         {/* ─── COURSES ─── */}
-        <section id="kurs" className="section-glow py-24 md:py-32">
+        <section id="kurs" className="section-glow section-dark py-24 md:py-32">
           <div className="mx-auto max-w-5xl px-6">
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
-              Tilgjengelige kurs
+              Tilgjengelige <span className="gradient-text">kurs</span>
             </h2>
 
             <div className="glass-card rounded-2xl overflow-hidden md:flex">
@@ -333,8 +337,10 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="section-divider" />
+
         {/* ─── TESTIMONIAL ─── */}
-        <section className="py-16 md:py-24">
+        <section className="section-dark py-16 md:py-24">
           <div className="mx-auto max-w-3xl px-6">
             <div className="glass-card rounded-2xl p-8 md:p-12">
               <div className="flex items-start gap-2 mb-6">
@@ -363,8 +369,10 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="section-divider" />
+
         {/* ─── SOCIAL PROOF / ABOUT ─── */}
-        <section id="om" className="py-24 md:py-32">
+        <section id="om" className="section-grid py-24 md:py-32">
           <div className="mx-auto max-w-4xl px-6">
             <div className="proof-card rounded-2xl p-10 md:p-14 text-center">
               <p className="text-xl md:text-2xl font-medium leading-relaxed text-gray-300 mb-12 max-w-2xl mx-auto">

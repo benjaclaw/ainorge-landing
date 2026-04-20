@@ -28,9 +28,38 @@
 }
 
 body {
-  background: var(--background);
+  background: #07080f;
+  background-image: radial-gradient(ellipse 100% 50% at 50% 0%, rgba(60, 40, 160, 0.15) 0%, transparent 60%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* Section with purple/blue glow */
+.section-dark {
+  position: relative;
+}
+.section-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(80, 50, 200, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Section with subtle grid (lighter than hero) */
+.section-grid {
+  background-image:
+    linear-gradient(rgba(100, 80, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 80, 255, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Gradient divider line between sections */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(100, 80, 255, 0.3), rgba(228, 64, 64, 0.2), transparent);
+  margin: 0;
 }
 
 /* Navbar */
@@ -94,7 +123,7 @@ body {
 
 /* Glass card */
 .glass-card {
-  background: rgba(13, 20, 33, 0.6);
+  background: rgba(15, 12, 35, 0.6);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -232,7 +261,7 @@ body {
 
 /* Course card thumbnail */
 .course-thumbnail {
-  background: linear-gradient(135deg, #0D1421, #1a1040, #0D1421);
+  background: linear-gradient(135deg, rgba(60, 30, 120, 0.8), rgba(20, 15, 50, 0.9));
   display: flex;
   align-items: center;
   justify-content: center;
