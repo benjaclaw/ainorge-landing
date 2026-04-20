@@ -236,7 +236,6 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="section-divider" />
 
         {/* ─── BENEFITS ─── */}
         <section className="section-glow section-grid py-24 md:py-32">
@@ -283,7 +282,6 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="section-divider" />
 
         {/* ─── COURSES ─── */}
         <section id="kurs" className="section-glow section-dark py-24 md:py-32">
@@ -337,7 +335,6 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="section-divider" />
 
         {/* ─── TESTIMONIAL ─── */}
         <section className="section-dark py-16 md:py-24">
@@ -369,7 +366,6 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="section-divider" />
 
         {/* ─── SOCIAL PROOF / ABOUT ─── */}
         <section id="om" className="section-grid py-24 md:py-32">
