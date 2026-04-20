@@ -142,13 +142,11 @@ export default function Home() {
             </div>
 
             <h1 className="fade-in fade-in-delay-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-6">
-              Mestre AI.
-              <br />
-              Hold deg i frontlinjen.
+              Bli med i det norske AI-fellesskapet.
             </h1>
 
             <p className="fade-in fade-in-delay-2 text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-              Norges fremste AI-fellesskap for alle som vil gå fra teori til praksis.
+              Et helt nytt digitalt fellesskap for alle som er interessert i AI.
             </p>
 
             <div className="fade-in fade-in-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
@@ -278,7 +276,7 @@ export default function Home() {
                 <ul className="space-y-4 mb-10 text-[15px]">
                   {[
                     "Alt i Standard",
-                    "Full kursbibliotek (inkl. OpenClaw Mastery)",
+                    "Full kursbibliotek",
                     "Eksklusive ukentlige AI-tips",
                     "Teknisk hjelp i lukket forum",
                     "Tidlig tilgang til nye kurs",
@@ -330,7 +328,7 @@ export default function Home() {
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-bold mb-3">OpenClaw Mastery</h3>
+                <h3 className="text-2xl font-bold mb-3">OpenClaw - AI agenter som jobber for deg</h3>
 
                 <p className="text-muted leading-relaxed mb-6 max-w-lg">
                   Lær strategien, strukturen og bruksområdene for AI-agenter. Få
@@ -374,8 +372,8 @@ export default function Home() {
                   <p className="text-sm text-muted mt-1">Å starte</p>
                 </div>
                 <div>
-                  <p className="text-2xl md:text-3xl font-black text-teal">OpenClaw</p>
-                  <p className="text-sm text-muted mt-1">Fokus</p>
+                  <p className="text-2xl md:text-3xl font-black text-teal">Norsk</p>
+                  <p className="text-sm text-muted mt-1">Community</p>
                 </div>
               </div>
             </div>
