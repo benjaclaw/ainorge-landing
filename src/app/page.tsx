@@ -246,28 +246,35 @@ export default function Home() {
               Alt du trenger for å holde deg oppdatert og relevant i AI-verdenen.
             </p>
 
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2">
               {[
                 {
-                  emoji: "🚀",
-                  title: "Praktisk læring",
-                  desc: "Ikke teori, men faktiske verktøy og resultater. Lær å bruke AI i hverdagen.",
+                  emoji: "🇳🇴",
+                  title: "Et ekte norsk fellesskap",
+                  desc: "Bli en del av et digitalt fellesskap der norske AI-entusiaster møtes, deler og lærer av hverandre. Her snakker vi samme språk — bokstavelig talt.",
+                },
+                {
+                  emoji: "🎓",
+                  title: "Kurs som faktisk gir mening",
+                  desc: "Fra grunnleggende forståelse til avanserte agentstrategier. Kursene våre er laget for å gi deg innsikt du kan bruke — ikke bare teori.",
+                },
+                {
+                  emoji: "📡",
+                  title: "Hold deg foran utviklingen",
+                  desc: "AI beveger seg raskt. Vi følger med for deg — ukentlige oppdateringer, siste nytt og gjennomganger av det som faktisk betyr noe.",
                 },
                 {
                   emoji: "🤝",
-                  title: "Norsk nettverk",
-                  desc: "Knytt kontakter med likesinnede i Norge. Del erfaringer og lær av hverandre.",
-                },
-                {
-                  emoji: "🔥",
-                  title: "Alltid oppdatert",
-                  desc: "Vi sorterer AI-støyen og gir deg det som teller. Ukentlige oppdateringer og tips.",
+                  title: "Nettverk med likesinnede",
+                  desc: "Knytt kontakter med gründere, utviklere og nysgjerrige mennesker som alle har ett til felles: de vil forstå og bruke AI bedre.",
                 },
               ].map((item) => (
-                <div key={item.title} className="glass-card rounded-2xl p-8">
-                  <span className="text-4xl mb-4 block">{item.emoji}</span>
-                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-muted leading-relaxed">{item.desc}</p>
+                <div key={item.title} className="glass-card rounded-2xl p-8 flex gap-5">
+                  <span className="text-3xl flex-shrink-0 mt-1">{item.emoji}</span>
+                  <div>
+                    <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                    <p className="text-muted leading-relaxed text-sm">{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
