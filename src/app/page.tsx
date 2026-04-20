@@ -303,7 +303,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ─── COURSES ─── */
+        {/* ─── COURSES ─── */}
         <section id="kurs" className="section-glow py-24 md:py-32">
           <div className="mx-auto max-w-5xl px-6">
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
