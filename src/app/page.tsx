@@ -135,12 +135,6 @@ export default function Home() {
         {/* ─── HERO ─── */}
         <section className="hero-bg min-h-screen flex items-center justify-center relative">
           <div className="mx-auto max-w-4xl px-6 pt-24 pb-20 text-center relative z-10">
-            <div className="fade-in">
-              <span className="pill text-muted mb-8 inline-flex">
-                Lansert april 2026 🇳🇴
-              </span>
-            </div>
-
             <h1 className="fade-in fade-in-delay-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-6">
               Bli med i det norske{" "}
               <span className="gradient-text">AI-fellesskapet.</span>
@@ -170,6 +164,104 @@ export default function Home() {
             <p className="fade-in fade-in-delay-4 text-sm text-muted/60">
               Gratis å starte &nbsp;•&nbsp; Ingen kredittkort &nbsp;•&nbsp; Norsk community
             </p>
+
+            {/* Trust bar */}
+            <div className="fade-in fade-in-delay-5 flex flex-col items-center gap-3 mt-10">
+              {/* Avatar stack */}
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-3">
+                  {["E", "M", "K", "T", "A"].map((letter, i) => (
+                    <div
+                      key={i}
+                      className="w-9 h-9 rounded-full border-2 border-[#0a0608] flex items-center justify-center text-xs font-bold text-white"
+                      style={{
+                        background: `linear-gradient(135deg, #E44040, #FDB840)`,
+                        zIndex: 5 - i,
+                      }}
+                    >
+                      {letter}
+                    </div>
+                  ))}
+                </div>
+                <span className="text-sm text-white/70 ml-2">+47 medlemmer har allerede blitt med</span>
+              </div>
+              {/* Star rating */}
+              <div className="flex items-center gap-1.5">
+                {[1,2,3,4,5].map(i => (
+                  <svg key={i} className="w-4 h-4" viewBox="0 0 20 20" fill="#FDB840">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                ))}
+                <span className="text-sm text-white/50 ml-1">&ldquo;Det beste norske AI-fellesskapet&rdquo;</span>
+              </div>
+            </div>
+
+            {/* Hero visual — floating dashboard mockup */}
+            <div className="fade-in fade-in-delay-5 mt-16 relative mx-auto max-w-3xl">
+              {/* Glow behind card */}
+              <div className="absolute inset-0 blur-3xl opacity-20 rounded-3xl" style={{background: "linear-gradient(135deg, #E44040, #FDB840)"}} />
+
+              <div className="relative rounded-2xl border border-white/10 overflow-hidden" style={{background: "rgba(13,20,33,0.9)", backdropFilter: "blur(20px)"}}>
+                {/* Window chrome */}
+                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5" style={{background: "rgba(255,255,255,0.03)"}}>
+                  <div className="w-3 h-3 rounded-full bg-red-500/70" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
+                  <div className="w-3 h-3 rounded-full bg-green-500/70" />
+                  <span className="ml-3 text-xs text-white/30">skool.com/ai-norge</span>
+                </div>
+
+                {/* Dashboard content */}
+                <div className="p-6 grid grid-cols-3 gap-4">
+                  {/* Left: Feed */}
+                  <div className="col-span-2 space-y-3">
+                    <p className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3">Siste innlegg</p>
+                    {[
+                      { name: "Erik M.", time: "2t siden", text: "Satte opp min første AI-agent med OpenClaw i dag! 🚀", likes: 12 },
+                      { name: "Kari L.", time: "5t siden", text: "Noen som har testet GPT-5 til automatisering av epost?", likes: 8 },
+                      { name: "Thomas A.", time: "1d siden", text: "Deler min blueprint for lead gen-agenten...", likes: 24 },
+                    ].map((post, i) => (
+                      <div key={i} className="rounded-xl p-3 border border-white/5" style={{background: "rgba(255,255,255,0.03)"}}>
+                        <div className="flex items-center gap-2 mb-1.5">
+                          <div className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold text-white" style={{background: "linear-gradient(135deg, #E44040, #FDB840)"}}>
+                            {post.name[0]}
+                          </div>
+                          <span className="text-xs font-medium text-white/80">{post.name}</span>
+                          <span className="text-[10px] text-white/30 ml-auto">{post.time}</span>
+                        </div>
+                        <p className="text-xs text-white/60 leading-relaxed">{post.text}</p>
+                        <div className="flex items-center gap-1 mt-2">
+                          <svg className="w-3 h-3 text-white/30" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"/></svg>
+                          <span className="text-[10px] text-white/30">{post.likes}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Right: Stats */}
+                  <div className="space-y-3">
+                    <p className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3">Oversikt</p>
+                    {[
+                      { label: "Medlemmer", value: "47+", icon: "👥" },
+                      { label: "Innlegg", value: "120+", icon: "💬" },
+                      { label: "Kurs", value: "1 live", icon: "🎓" },
+                    ].map((stat, i) => (
+                      <div key={i} className="rounded-xl p-3 border border-white/5 text-center" style={{background: "rgba(255,255,255,0.03)"}}>
+                        <p className="text-lg mb-0.5">{stat.icon}</p>
+                        <p className="text-sm font-bold text-white">{stat.value}</p>
+                        <p className="text-[10px] text-white/40">{stat.label}</p>
+                      </div>
+                    ))}
+
+                    {/* CTA inside mockup */}
+                    <a href="https://www.skool.com/ai-norge" target="_blank" rel="noopener noreferrer"
+                      className="block mt-4 rounded-xl py-2.5 text-xs font-bold text-center text-[#080C14]"
+                      style={{background: "linear-gradient(135deg, #E44040, #FDB840)"}}>
+                      Bli med nå →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
