@@ -142,7 +142,8 @@ export default function Home() {
             </div>
 
             <h1 className="fade-in fade-in-delay-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-6">
-              Bli med i det norske AI-fellesskapet.
+              Bli med i det norske{" "}
+              <span className="gradient-text">AI-fellesskapet.</span>
             </h1>
 
             <p className="fade-in fade-in-delay-2 text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -225,7 +226,7 @@ export default function Home() {
               <div className="standard-card rounded-2xl p-8 md:p-10">
                 <div className="flex items-center gap-3 mb-6">
                   <h3 className="text-2xl font-bold">Standard</h3>
-                  <span className="rounded-full bg-teal/10 border border-teal/20 px-3 py-0.5 text-xs font-semibold text-teal">
+                  <span className="rounded-full px-3 py-0.5 text-xs font-semibold text-white" style={{background: 'linear-gradient(135deg, #E44040, #FDB840)'}}>
                     GRATIS
                   </span>
                 </div>
@@ -343,7 +344,7 @@ export default function Home() {
                     href={SKOOL_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-teal font-semibold text-sm hover:underline"
+                    className="gradient-text font-semibold text-sm hover:underline"
                   >
                     Les mer →
                   </a>
@@ -364,15 +365,15 @@ export default function Home() {
 
               <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto">
                 <div>
-                  <p className="text-2xl md:text-3xl font-black text-teal">2026</p>
+                  <p className="text-2xl md:text-3xl font-black gradient-text">2026</p>
                   <p className="text-sm text-muted mt-1">Lansert</p>
                 </div>
                 <div>
-                  <p className="text-2xl md:text-3xl font-black text-teal">Gratis</p>
+                  <p className="text-2xl md:text-3xl font-black gradient-text">Gratis</p>
                   <p className="text-sm text-muted mt-1">Å starte</p>
                 </div>
                 <div>
-                  <p className="text-2xl md:text-3xl font-black text-teal">Norsk</p>
+                  <p className="text-2xl md:text-3xl font-black gradient-text">Norsk</p>
                   <p className="text-sm text-muted mt-1">Community</p>
                 </div>
               </div>
