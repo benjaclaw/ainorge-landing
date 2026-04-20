@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Syne } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Syne({
+const inter = Plus_Jakarta_Sans({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
